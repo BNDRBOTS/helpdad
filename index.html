@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott | A Father's Plea</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+body {
+background-color: #0a0a0a;
+color: #f5f5f5;
+font-family: 'Inter', sans-serif;
+overflow-x: hidden;
+}
+.serif {
+font-family: 'Playfair Display', serif;
+}
+.reveal {
+opacity: 0;
+transform: translateY(30px);
+transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+.grain {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+z-index: 50;
+opacity: 0.04;
+background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+.gradient-overlay {
+background: linear-gradient(to bottom, transparent 0%, #0a0a0a 100%);
+}
+.donation-card {
+background: rgba(255, 255, 255, 0.03);
+border: 1px solid rgba(255, 255, 255, 0.1);
+transition: all 0.3s ease;
+}
+.donation-card:hover {
+background: rgba(255, 255, 255, 0.07);
+border-color: rgba(255, 255, 255, 0.3);
+}
+.qr-placeholder {
+aspect-ratio: 1/1;
+background: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #000;
+font-weight: bold;
+font-size: 0.75rem;
+text-align: center;
+padding: 10px;
+border-radius: 4px;
+}
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-40 flex justify-between items-center px-6 py-8 md:px-12 transition-all duration-500" id="navbar">
+<div class="text-sm font-semibold tracking-widest uppercase opacity-60">Scott</div>
+<a href="#donate" class="text-xs font-semibold tracking-widest uppercase border border-white/30 px-4 py-2 hover:bg-white hover:text-black transition-colors duration-300">Help Now</a>
+</nav>
+
+<!-- Hero Section -->
+<section class="min-h-screen flex flex-col justify-center items-center px-6 text-center relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/10 rounded-full blur-[120px]"></div>
+</div>
+
+<h1 class="serif text-5xl md:text-8xl font-bold mb-6 reveal tracking-tight">
+My name is Scott.
+</h1>
+<p class="text-lg md:text-xl opacity-60 max-w-2xl reveal delay-200 leading-relaxed">
+A father fighting for his son.
+</p>
+<div class="absolute bottom-12 animate-bounce opacity-30">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 13 5 5 5-5"/><path d="m7 6 5 5 5-5"/></svg>
+</div>
+</section>
+
+<!-- Narrative Journey -->
+<section class="px-6 md:px-12 lg:px-24 py-24 max-w-5xl mx-auto space-y-32 md:space-y-64">
+
+<div class="reveal">
+<p class="serif text-2xl md:text-4xl leading-relaxed">
+I'm a father who has been separated from his son Mason through a multi-state legal process. Mason's mother is functionally absent. I was his only consistent, secure parent — the one who showed up, who built something intentional, who was actively breaking a generational cycle for him. That's gone now. He's without the one person who would die for him without blinking.
+</p>
+</div>
+
+<div class="reveal grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="space-y-6">
+<p class="serif text-2xl md:text-4xl leading-relaxed">
+I'm in Phoenix. No car. No support network. No one to call. Last year I was hospitalized more times than the previous several years combined — sometimes overnight — and walked home after each one. Miles, sometimes. Sick.
+</p>
+</div>
+<div class="h-64 bg-white/5 border border-white/10 rounded-sm overflow-hidden relative">
+<div class="absolute inset-0 flex items-center justify-center opacity-20 text-xs uppercase tracking-widest">Visualizing Isolation</div>
+<div class="absolute inset-0 bg-gradient-to-tr from-black to-transparent"></div>
+</div>
+</div>
+
+<div class="reveal">
+<p class="serif text-2xl md:text-4xl leading-relaxed">
+I have a storage unit I'm losing to unpaid fees. It has my legal evidence in it. Everything I own. My only AC access when I have nowhere to go.
+</p>
+</div>
+
+<div class="reveal">
+<p class="serif text-2xl md:text-4xl leading-relaxed">
+I have built the case. I have the documentation, the evidence, the legal framework. I have been fighting this alone long enough that the fighting itself is making me sicker.
+</p>
+</div>
+
+<!-- Critical Ask Section -->
+<div class="reveal bg-white text-black p-8 md:p-16 rounded-sm shadow-2xl">
+<h2 class="serif text-3xl md:text-5xl font-bold mb-8">The Need</h2>
+<p class="text-xl md:text-2xl leading-relaxed mb-8 font-medium">
+I need one person who will look at what I've built and help me move it forward. Not carry me. Work with me. A lawyer, an advocate, someone who handles multi-state custody — UCCJEA jurisdiction — who can look at real evidence and act.
+</p>
+<div class="flex flex-wrap gap-4">
+<span class="bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-tighter">UCCJEA Jurisdiction</span>
+<span class="bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-tighter">Evidence Ready</span>
+<span class="bg-black text-white px-3 py-1 text-xs font-bold uppercase tracking-tighter">Phoenix, AZ</span>
+</div>
+</div>
+
+<div class="reveal text-center max-w-3xl mx-auto">
+<p class="serif text-3xl md:text-5xl leading-tight italic">
+Mason is being harmed right now. Not eventually. Today. He lost his mother to absence. He cannot also lose his father to a system that hasn't looked closely enough.
+</p>
+</div>
+
+<div class="reveal text-center mb-32">
+<p class="serif text-2xl md:text-4xl leading-relaxed">
+I am still here. I am asking for help.
+</p>
+</div>
+</section>
+
+<!-- Donation Section -->
+<section id="donate" class="px-6 md:px-12 lg:px-24 py-32 border-t border-white/10 bg-[#0f0f0f]">
+<div class="max-w-6xl mx-auto">
+<div class="text-center mb-20 reveal">
+<h2 class="serif text-4xl md:text-6xl font-bold mb-6">Support the Fight</h2>
+<p class="opacity-60 text-lg">Every contribution goes toward legal fees and securing the evidence needed to bring Mason home.</p>
+</div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+<!-- Stripe -->
+<div class="donation-card p-8 flex flex-col items-center text-center rounded-lg">
+<div class="qr-placeholder mb-6 w-32 h-32">
+STRIPE QR CODE
+</div>
+<h3 class="text-xl font-semibold mb-4">Stripe</h3>
+<a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">Donate via Stripe</a>
+</div>
+
+<!-- Venmo -->
+<div class="donation-card p-8 flex flex-col items-center text-center rounded-lg">
+<div class="qr-placeholder mb-6 w-32 h-32">
+VENMO QR CODE
+</div>
+<h3 class="text-xl font-semibold mb-4">Venmo</h3>
+<a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">Donate via Venmo</a>
+</div>
+
+<!-- CashApp -->
+<div class="donation-card p-8 flex flex-col items-center text-center rounded-lg">
+<div class="qr-placeholder mb-6 w-32 h-32">
+CASHAPP QR CODE
+</div>
+<h3 class="text-xl font-semibold mb-4">CashApp</h3>
+<a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">Donate via CashApp</a>
+</div>
+
+<!-- Zelle -->
+<div class="donation-card p-8 flex flex-col items-center text-center rounded-lg">
+<div class="qr-placeholder mb-6 w-32 h-32">
+ZELLE QR CODE
+</div>
+<h3 class="text-xl font-semibold mb-4">Zelle</h3>
+<a href="#" class="text-xs font-bold uppercase tracking-widest border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">Donate via Zelle</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="px-6 py-12 text-center opacity-30 text-xs tracking-widest uppercase">
+&copy; 2026 &bull; For Mason
+</footer>
+
+<script>
+// Reveal elements on scroll
+const observerOptions = {
+threshold: 0.1,
+rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+}
+});
+}, observerOptions);
+
+document.querySelectorAll('.reveal').forEach(el => {
+observer.observe(el);
+});
+
+// Navbar transparency effect
+window.addEventListener('scroll', () => {
+const nav = document.getElementById('navbar');
+if (window.scrollY > 50) {
+nav.classList.add('bg-black/80', 'backdrop-blur-md', 'py-4');
+nav.classList.remove('py-8');
+} else {
+nav.classList.remove('bg-black/80', 'backdrop-blur-md', 'py-4');
+nav.classList.add('py-8');
+}
+});
+</script>
+</body>
+</html>
